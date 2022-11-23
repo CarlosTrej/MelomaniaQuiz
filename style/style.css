@@ -43,3 +43,17 @@ body{
     }
     
   }
+
+  @media  (max-width: 403px){
+    .container1{
+        margin: 4em 0 0 0;
+    }
+    .container1 h1{font-size: larger;}
+    .container1 h2{font-size: medium;}
+    #offcanvasDarkNavbar{
+        /* padding: 0 2em; */
+        background-color: red;
+        margin: 0 0 0 8em;
+    }
+  }
+
