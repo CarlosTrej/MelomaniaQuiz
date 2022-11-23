@@ -1,0 +1,41 @@
+.testBody{
+    background-image: url('https://media.giphy.com/media/xTiTnLfEjxhADbjswo/giphy.gif');
+    background-size: cover;
+    background-repeat:no-repeat; 
+    font-family: 'Fredoka One', cursive;
+}
+
+.containerTest1{
+    margin: 15em 5em;
+    border-radius: 2%;
+    border: 2em outset #a162e5de;
+}
+
+.formTest{
+    background-color: rgba(155, 134, 204, 0.647);
+    color: rgb(229, 255, 135);
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.inra{
+    width: 5%; 
+    height: 1em;
+}
+
+
+.btnAction{
+    margin: 0 2em;
+    border: 1em outset #ba9eec;
+}
+.btnAction:hover{
+    transition: border .30s;
+    border: 1.5em outset #9f7fd7;
+    color: #fbff1c;
+    background-color: #a078e6a2;
+
+}
+

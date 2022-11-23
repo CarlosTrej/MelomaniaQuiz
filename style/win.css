@@ -1,0 +1,12 @@
+.containerWin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items:center;
+    margin: 3em 0 0 0;
+    padding: 2em 1em;
+    color: yellow;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 26px;
+}

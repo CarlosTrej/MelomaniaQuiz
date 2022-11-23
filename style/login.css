@@ -1,0 +1,25 @@
+.loginBody{
+    background-image: url("https://media.giphy.com/media/xTk9ZwzuWiyJ8n5Vzq/giphy.gif");
+    background-repeat:unset;
+    background-size: cover;
+    font-family: 'Fredoka One', cursive;
+}
+
+.containerLogin1{
+    background-color: rgba(6, 52, 113, 0.676);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 8em 4em;
+    padding: 4em;
+    border-radius: 5%;
+    color: rgb(211, 224, 69);
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 2em;
+}

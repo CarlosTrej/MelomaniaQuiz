@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('login.css');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css');
+@import url('./test.css');
+@import url('./footer.css');
+@import url('./win.css');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body{
+    background-image: url("https://media.giphy.com/media/doXBzUFJRxpaUbuaqz/giphy.gif");
+    background-size: cover;
+    background-repeat:unset;
+
+}
+
+.mainContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.container1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items:center;
+    margin: 3em 0 0 0;
+    padding: 2em 1em;
+    color: yellow;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 26px;
+}
+.navContainer{
+    margin: 0 0 2em 0;
+}
+
+@media  (max-width: 550px){
+    .dj{
+        width: 80%;
+    }
+    
+  }
