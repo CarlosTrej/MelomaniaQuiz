@@ -70,8 +70,11 @@ function userInit(){
           showConfirmButton: false,
           timer: 3500
         })
-        sesion.init=false;
-        window.localStorage.setItem("usuario", JSON.stringify(sesion));
+    sesion.init=false;
+    window.localStorage.setItem("usuario", JSON.stringify(sesion));
+  }
+  if(sesion.question !=1 && sesion.question !=20){
+    window.location.href = `../index.html`;
   }
 }/* userInit */
 
@@ -153,7 +156,7 @@ function questions(x,id){
             x == 2 ? chapterAnswer = true :chapterAnswer;
             
             if(chapterAnswer == true){ 
- 
+              changeQuestion();
               template2();
             }
             return chapterAnswer; 
@@ -162,7 +165,7 @@ function questions(x,id){
             x == 3 ? chapterAnswer = true :chapterAnswer;
             
             if(chapterAnswer == true){
- 
+              changeQuestion();
               template3();
             }
             return chapterAnswer; 
@@ -171,7 +174,7 @@ function questions(x,id){
             x == 2 ? chapterAnswer = true :chapterAnswer;
             
             if(chapterAnswer == true){
-   
+              changeQuestion();
               template4();
             }
             return chapterAnswer; 
@@ -179,7 +182,7 @@ function questions(x,id){
         case "4":
             x == 2 ? chapterAnswer = true :chapterAnswer;
             if(chapterAnswer == true){
- 
+              changeQuestion();
               template5();
             }
             return chapterAnswer;  
@@ -187,7 +190,7 @@ function questions(x,id){
         case "5":
             x == 3 ? chapterAnswer = true :chapterAnswer;
             if(chapterAnswer == true){
- 
+              changeQuestion();
               template6();
             }
             return chapterAnswer;  
@@ -195,7 +198,7 @@ function questions(x,id){
         case "6":
             x == 1 ? chapterAnswer = true :chapterAnswer;
             if(chapterAnswer == true){
- 
+              changeQuestion();
               template7();
             }
             return chapterAnswer;  
@@ -203,7 +206,7 @@ function questions(x,id){
         case "7":
             x == 3 ? chapterAnswer = true :chapterAnswer;
             if(chapterAnswer == true){
-   
+              changeQuestion();
               template8();
             }
             return chapterAnswer;  
@@ -211,7 +214,7 @@ function questions(x,id){
         case "8":
             x == 3 ? chapterAnswer = true :chapterAnswer;
             if(chapterAnswer == true){
-  
+              changeQuestion();
               template9();
             }
             return chapterAnswer;  
@@ -219,7 +222,7 @@ function questions(x,id){
         case "9":
             x == 2 ? chapterAnswer = true :chapterAnswer;
             if(chapterAnswer == true){
-   
+              changeQuestion();
               template10();
             }
             return chapterAnswer;  
@@ -227,7 +230,7 @@ function questions(x,id){
         case "10":
             x == 2 ? chapterAnswer = true :chapterAnswer;
             if(chapterAnswer == true){
-   
+              changeQuestion();
               template11();
             }
             return chapterAnswer;  
@@ -235,7 +238,7 @@ function questions(x,id){
         case "11":
             x == 3 ? chapterAnswer = true :chapterAnswer;
             if(chapterAnswer == true){
- 
+              changeQuestion();
               template12();
             }
             return chapterAnswer;  
@@ -243,7 +246,7 @@ function questions(x,id){
         case "12":
             x == 1 ? chapterAnswer = true :chapterAnswer;
             if(chapterAnswer == true){
-   
+              changeQuestion();
               template13();
             }
             return chapterAnswer;  
@@ -251,7 +254,7 @@ function questions(x,id){
         case "13":
             x == 3 ? chapterAnswer = true :chapterAnswer;
             if(chapterAnswer == true){
-   
+              changeQuestion();
               template14();
             }
             return chapterAnswer;  
@@ -259,7 +262,7 @@ function questions(x,id){
         case "14":
             x == 2 ? chapterAnswer = true :chapterAnswer;
             if(chapterAnswer == true){
-   
+              changeQuestion();
               template15();
             }
             return chapterAnswer;  
@@ -267,7 +270,7 @@ function questions(x,id){
         case "15":
           x == 2 ? chapterAnswer = true :chapterAnswer;
           if(chapterAnswer == true){
-            
+            changeQuestion();
             template16();
           }
           return chapterAnswer;  
@@ -275,13 +278,43 @@ function questions(x,id){
         case "16":
           x == 3 ? chapterAnswer = true :chapterAnswer;
           if(chapterAnswer == true){
+            changeQuestion();
+            template17();
+          }
+          return chapterAnswer;  
+          break;
+          case "17":
+          x == 2 ? chapterAnswer = true :chapterAnswer;
+          if(chapterAnswer == true){
+            changeQuestion();
+            template18();
+          }
+          return chapterAnswer;  
+          break;
+          case "18":
+          x == 1 ? chapterAnswer = true :chapterAnswer;
+          if(chapterAnswer == true){
+            changeQuestion();
+            template19();
+          }
+          return chapterAnswer;  
+          break;
+          case "19":
+          x == 3 ? chapterAnswer = true :chapterAnswer;
+          if(chapterAnswer == true){
+            changeQuestion();
+            template20();
+          }
+          return chapterAnswer;  
+          break;
+          case "20":
+          x == 3 ? chapterAnswer = true :chapterAnswer;
+          if(chapterAnswer == true){
               let puntos = {
                 puntajeTotal:score
               }
               window.localStorage.setItem("puntos", JSON.stringify(puntos));
-              
-              location.href = "../win.html"
-              
+              location.href = "./../pages/win.html";
           }
           return chapterAnswer;  
           break;
@@ -300,7 +333,7 @@ function template2(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #2
       <br><br>
-      <audio src="../sources/Running Up That Hill.mp3" controls autoplay></audio>
+      <audio src="../sources/Running Up That Hill.mp3" controls autoplay preload=""></audio>
       <br>
       <br>
         Adivina la canción<br><br>
@@ -319,7 +352,7 @@ function template3(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #3
       <br><br>
-      <audio src="../sources/Black Dog.mp3" controls autoplay></audio>
+      <audio src="../sources/Black Dog.mp3" controls autoplay preload=""></audio>
       <br>
       <br>
         Adivina la canción<br><br>
@@ -336,7 +369,7 @@ function template4(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #4
       <br><br>
-      <audio src="../sources/And i love her.mp3" controls autoplay></audio>
+      <audio src="../sources/And i love her.mp3" controls autoplay preload=""></audio>
       <br>
       <br>
         Adivina el álbum<br><br>
@@ -353,7 +386,7 @@ function template5(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #5
       <br><br>
-      <audio src="../sources/In da club.mp3" controls autoplay></audio>
+      <audio src="../sources/In da club.mp3" controls autoplay preload=""></audio>
       <br>
       <br>
         Adivina al intérprete<br><br>
@@ -370,7 +403,7 @@ function template6(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #6
       <br><br>
-      <audio src="../sources/A dios le pido.mp3" controls autoplay></audio>
+      <audio src="../sources/A dios le pido.mp3" controls autoplay preload=""></audio>
       <br>
       <br>
         Adivina al intérprete<br><br>
@@ -387,7 +420,7 @@ function template7(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #7
       <br><br>
-      <audio src="../sources/Insane in the brain.mp3" controls autoplay></audio>
+      <audio src="../sources/Insane in the brain.mp3" controls autoplay preload=""></audio>
       <br>
       <br>
         Adivina la canción<br><br>
@@ -404,7 +437,7 @@ function template8(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #8
       <br><br>
-      <audio src="../sources/One step beyon.mp3" controls autoplay></audio>
+      <audio src="../sources/One step beyon.mp3" controls autoplay preload=""></audio>
       <br>
       <br>
         Adivina la canción<br><br>
@@ -421,7 +454,7 @@ function template9(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #9
       <br><br>
-      <audio src="../sources/King without a crown.mp3" controls autoplay></audio>
+      <audio src="../sources/King without a crown.mp3" controls autoplay preload=""></audio>
       <br>
       <br>
         Adivina la canción<br><br>
@@ -438,7 +471,7 @@ function template10(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #10
       <br><br>
-      <audio src="../sources/Stayin alive.mp3" controls autoplay></audio>
+      <audio src="../sources/Stayin alive.mp3" controls autoplay preload=""></audio>
       <br>
       <br>
         Adivina al intérprete<br><br>
@@ -455,7 +488,7 @@ function template11(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #11
       <br><br>
-      <audio src="../sources/Te para 3.mp3" controls autoplay></audio>
+      <audio src="../sources/Te para 3.mp3" controls autoplay preload=""></audio>
       <br>
       <br>
         Adivina la canción<br><br>
@@ -472,7 +505,7 @@ function template12(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #12
       <br><br>
-      <audio src="../sources/No Surprise.mp3" controls autoplay></audio>
+      <audio src="../sources/No Surprise.mp3" controls autoplay preload=""></audio>
       <br>
       <br>
         Adivina la canción<br><br>
@@ -489,7 +522,7 @@ function template13(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #13
       <br><br>
-      <audio src="../sources/Smoke on the water.mp3" controls autoplay></audio>
+      <audio src="../sources/Smoke on the water.mp3" controls autoplay preload=""></audio>
       <br>
       <br>
         Adivina la canción<br><br>
@@ -507,7 +540,7 @@ function template14(){
   formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
   <label for="">Pregunta #14
     <br><br>
-    <audio src="../sources/Stronger than me.mp3" controls autoplay></audio>
+    <audio src="../sources/Stronger than me.mp3" controls autoplay preload=""></audio>
     <br>
     <br>
       Adivina al intérprete<br><br>
@@ -524,7 +557,7 @@ function template15(){
   formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
   <label for="">Pregunta #15
     <br><br>
-    <audio src="../sources/All Star.mp3" controls autoplay></audio>
+    <audio src="../sources/All Star.mp3" controls autoplay preload=""></audio>
     <br>
     <br>
       Adivina la canción<br><br>
@@ -542,7 +575,7 @@ function template16(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #16
       <br><br>
-      <audio src="../sources/Toxic.mp3" controls autoplay></audio>
+      <audio src="../sources/Toxic.mp3" controls autoplay preload=""></audio>
       <br>
       <br>
         Adivina el álbum<br><br>
@@ -553,6 +586,78 @@ function template16(){
     <input class="btnAction" type="button" value="Aceptar" id="16" onclick="initGame(this.id)">
   </form>`;
 } /* template16 */
+
+function template17(){
+  
+  bodyPaint.style.backgroundImage = "url('../img/B9vg.gif')";
+    formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
+    <label for="">Pregunta #17
+      <br><br>
+      <audio src="../sources/Rie Y Llora.mp3" controls autoplay preload=""></audio>
+      <br>
+      <br>
+        Adivina la canción<br><br>
+        <input class="inra" type="radio" name="opc" value="1" />Yerberito.<br><br>
+        <input class="inra" type="radio" name="opc" value="2" />Rie y llora.<br><br>
+        <input class="inra" type="radio" name="opc" value="3" />Celia Cruz.<br><br>
+    </label>
+    <input class="btnAction" type="button" value="Aceptar" id="17" onclick="initGame(this.id)">
+  </form>`;
+} /* template17 */
+
+function template18(){
+  
+  bodyPaint.style.backgroundImage = "url('../img/34TC.gif')";
+    formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
+    <label for="">Pregunta #18
+      <br><br>
+      <audio src="../sources/Blitzkrieg Bop.mp3" controls autoplay preload=""></audio>
+      <br>
+      <br>
+        Adivina el intérprete<br><br>
+        <input class="inra" type="radio" name="opc" value="1" />The Ramones.<br><br>
+        <input class="inra" type="radio" name="opc" value="2" />The Police.<br><br>
+        <input class="inra" type="radio" name="opc" value="3" />Sex Pistols.<br><br>
+    </label>
+    <input class="btnAction" type="button" value="Aceptar" id="18" onclick="initGame(this.id)">
+  </form>`;
+} /* template18 */
+
+function template19(){
+  
+  bodyPaint.style.backgroundImage = "url('../img/1d5g.gif')";
+    formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
+    <label for="">Pregunta #19
+      <br><br>
+      <audio src="../sources/Monstruo verde.mp3" controls autoplay preload=""></audio>
+      <br>
+      <br>
+        Adivina la canción<br><br>
+        <input class="inra" type="radio" name="opc" value="1" />Ultrasónica.<br><br>
+        <input class="inra" type="radio" name="opc" value="2" />Qué grosero.<br><br>
+        <input class="inra" type="radio" name="opc" value="3" />Monstruo verde.<br><br>
+    </label>
+    <input class="btnAction" type="button" value="Aceptar" id="19" onclick="initGame(this.id)">
+  </form>`;
+} /* template19 */
+
+function template20(){
+  
+  bodyPaint.style.backgroundImage = "url('../img/5F8F.gif')";
+    formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
+    <label for="">Pregunta #20
+      <br><br>
+      <audio src="../sources/A Little Less Conversation.mp3" controls autoplay preload=""></audio>
+      <br>
+      <br>
+        Adivina el autor<br><br>
+        <input class="inra" type="radio" name="opc" value="1" />Richie Valens.<br><br>
+        <input class="inra" type="radio" name="opc" value="2" />Frank Sinátra.<br><br>
+        <input class="inra" type="radio" name="opc" value="3" />Elvis Presley.<br><br>
+    </label>
+    <input class="btnAction" type="button" value="Aceptar" id="20" onclick="initGame(this.id)">
+  </form>`;
+} /* template20 */
 
 
 
