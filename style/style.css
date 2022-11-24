@@ -37,23 +37,65 @@ body{
     margin: 0 0 2em 0;
 }
 
-@media  (max-width: 550px){
+@media  (min-width: 404px) and (max-width: 650px){
     .dj{
         width: 80%;
     }
+    .containerLogin1 {
+        width: 90%;
+    }
+    .containerLogin1 form{
+        font-size: 1.4em;
+    }
+    .formTest{
+   
+        font-size: 1.5em;
+        padding: 3em 0;
+    }
+    .containerTest1{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .testBody{   
+        background-size: cover;
+        background-repeat:round; 
+    }
+    
     
   }
 
   @media  (max-width: 403px){
+    .dj{
+        width: 70%;
+    }
     .container1{
         margin: 4em 0 0 0;
     }
     .container1 h1{font-size: larger;}
     .container1 h2{font-size: medium;}
-    #offcanvasDarkNavbar{
-        /* padding: 0 2em; */
-        background-color: red;
-        margin: 0 0 0 8em;
+    .containerLogin1 {
+        width: 80%;
+    }
+    .containerLogin1 form{
+        font-size: 1.2em;
+    }
+    .formTest{
+        
+        font-size: 1.5em;
+        padding: 3em 0;
+        
+    }
+    .containerTest1{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .testBody{   
+        background-size: cover;
+        background-repeat:round; 
     }
   }
 

@@ -1,5 +1,5 @@
 .testBody{
-    background-image: url('https://media.giphy.com/media/xTiTnLfEjxhADbjswo/giphy.gif');
+    background-image: url('../img/T0fK.gif');
     background-size: cover;
     background-repeat:no-repeat; 
     font-family: 'Fredoka One', cursive;
@@ -14,7 +14,7 @@
 .formTest{
     background-color: rgba(155, 134, 204, 0.647);
     color: rgb(229, 255, 135);
-    padding: 2em;
+    padding: 2em 3em;
     display: flex;
     flex-direction: column;
     font-size: xx-large;

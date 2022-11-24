@@ -1,12 +1,12 @@
 .loginBody{
-    background-image: url("https://media.giphy.com/media/xTk9ZwzuWiyJ8n5Vzq/giphy.gif");
+    background-image: url("../img/7CJk.gif");
     background-repeat:unset;
     background-size: cover;
     font-family: 'Fredoka One', cursive;
 }
 
 .containerLogin1{
-    background-color: rgba(6, 52, 113, 0.676);
+    background-color: rgba(80, 23, 146, 0.936);
     display: flex;
     flex-direction: column;
     align-items: center;

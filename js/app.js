@@ -1,4 +1,5 @@
 
+
 let formQuestions = document.querySelector(".formTest");
 let bodyPaint = document.querySelector(".testBody");
 let nombre = document.getElementById("nametxt");
@@ -6,6 +7,7 @@ let edad = document.getElementById("edadtxt");
 let btnH = document.getElementById("btnHamburguesa");
 let score = 0;
 let btnRadio = document.getElementsByClassName("inra");
+
 
 let winImg =
 {
@@ -73,18 +75,26 @@ function userInit(){
   }
 }/* userInit */
 
+function changeQuestion(){
+  let sesion = JSON.parse(localStorage.getItem('usuario'));
+  sesion.question ++;
+  window.localStorage.setItem("usuario", JSON.stringify(sesion));
+}/* changeQuestion */
+
+function selectQuestion(){
+  let sesion = JSON.parse(localStorage.getItem('usuario'));
+  let x = sesion.question;
+  return x;
+}/* selectQuestion */
 
 userInit();
 function initGame(idBtn){
     let opc = document.querySelector('input[name="opc"]:checked').value;
     let chapterAnswer = questions(opc,idBtn);
     if(!chapterAnswer){
-        
         answerError();
-        console.log(" x error -->"+score);
     }else{
         winWay();
-        console.log(" x ganar-->"+score);
     } 
 }//initGame
 
@@ -124,8 +134,8 @@ function answerError(){
 function welcomeRules(){
   Swal.fire({
       title: 'Unas cuantas reglas y ya!',
-      html:'<b>1- Lee con atención las preguntas<br><br>2- Ganas [3] puntos al ganar cada pregunta<br><br>3- Pierdes [1] punto al equivocarte<br><br>4- Puedes descargar la canción que quieras</b>',
-      imageUrl: 'https://media.giphy.com/media/blSTtZehjAZ8I/giphy.gif',
+      html:'<b>1- Lee con atención las preguntas<br><br>2- Ganas [3] puntos al ganar cada pregunta<br><br>3- Pierdes [1] punto al equivocarte<br><br>4- Puedes descargar la canción que quieras :)</b>',
+      imageUrl: '../img/ICU.gif',
       imageWidth: 400,
       imageHeight: 200,
       imageAlt: 'Custom image',
@@ -136,27 +146,32 @@ function welcomeRules(){
 
 function questions(x,id){
     let chapterAnswer = false;
+   
     switch (id) {
         case "1":
           /* event.preventDefault() */
             x == 2 ? chapterAnswer = true :chapterAnswer;
+            
             if(chapterAnswer == true){ 
-            template2();
+ 
+              template2();
             }
             return chapterAnswer; 
             break;
         case "2":
             x == 3 ? chapterAnswer = true :chapterAnswer;
+            
             if(chapterAnswer == true){
-              
+ 
               template3();
             }
             return chapterAnswer; 
             break;
         case "3":
             x == 2 ? chapterAnswer = true :chapterAnswer;
+            
             if(chapterAnswer == true){
-                
+   
               template4();
             }
             return chapterAnswer; 
@@ -164,7 +179,7 @@ function questions(x,id){
         case "4":
             x == 2 ? chapterAnswer = true :chapterAnswer;
             if(chapterAnswer == true){
-              
+ 
               template5();
             }
             return chapterAnswer;  
@@ -172,7 +187,7 @@ function questions(x,id){
         case "5":
             x == 3 ? chapterAnswer = true :chapterAnswer;
             if(chapterAnswer == true){
-              
+ 
               template6();
             }
             return chapterAnswer;  
@@ -180,7 +195,7 @@ function questions(x,id){
         case "6":
             x == 1 ? chapterAnswer = true :chapterAnswer;
             if(chapterAnswer == true){
-              
+ 
               template7();
             }
             return chapterAnswer;  
@@ -188,7 +203,7 @@ function questions(x,id){
         case "7":
             x == 3 ? chapterAnswer = true :chapterAnswer;
             if(chapterAnswer == true){
-                
+   
               template8();
             }
             return chapterAnswer;  
@@ -196,7 +211,7 @@ function questions(x,id){
         case "8":
             x == 3 ? chapterAnswer = true :chapterAnswer;
             if(chapterAnswer == true){
-                
+  
               template9();
             }
             return chapterAnswer;  
@@ -204,7 +219,7 @@ function questions(x,id){
         case "9":
             x == 2 ? chapterAnswer = true :chapterAnswer;
             if(chapterAnswer == true){
-                
+   
               template10();
             }
             return chapterAnswer;  
@@ -212,7 +227,7 @@ function questions(x,id){
         case "10":
             x == 2 ? chapterAnswer = true :chapterAnswer;
             if(chapterAnswer == true){
-                
+   
               template11();
             }
             return chapterAnswer;  
@@ -220,7 +235,7 @@ function questions(x,id){
         case "11":
             x == 3 ? chapterAnswer = true :chapterAnswer;
             if(chapterAnswer == true){
-              
+ 
               template12();
             }
             return chapterAnswer;  
@@ -228,7 +243,7 @@ function questions(x,id){
         case "12":
             x == 1 ? chapterAnswer = true :chapterAnswer;
             if(chapterAnswer == true){
-                
+   
               template13();
             }
             return chapterAnswer;  
@@ -236,7 +251,7 @@ function questions(x,id){
         case "13":
             x == 3 ? chapterAnswer = true :chapterAnswer;
             if(chapterAnswer == true){
-                
+   
               template14();
             }
             return chapterAnswer;  
@@ -244,7 +259,7 @@ function questions(x,id){
         case "14":
             x == 2 ? chapterAnswer = true :chapterAnswer;
             if(chapterAnswer == true){
-                
+   
               template15();
             }
             return chapterAnswer;  
@@ -252,7 +267,7 @@ function questions(x,id){
         case "15":
           x == 2 ? chapterAnswer = true :chapterAnswer;
           if(chapterAnswer == true){
-              
+            
             template16();
           }
           return chapterAnswer;  
@@ -264,7 +279,9 @@ function questions(x,id){
                 puntajeTotal:score
               }
               window.localStorage.setItem("puntos", JSON.stringify(puntos));
-              location.href = "./../pages/win.html";
+              
+              location.href = "../win.html"
+              
           }
           return chapterAnswer;  
           break;
@@ -278,8 +295,8 @@ function questions(x,id){
 
 
 function template2(){
-
-    bodyPaint.style.backgroundImage = "url('https://media.giphy.com/media/coJ5R6MRIy64wtoKLb/giphy.gif')";          
+  
+    bodyPaint.style.backgroundImage = "url('../img/4RNn.gif')";          
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #2
       <br><br>
@@ -293,11 +310,12 @@ function template2(){
     </label>
     <input class="btnAction" type="button" value="Aceptar" id="2" onclick="initGame(this.id)">
   </form>`;
+ 
   
 } /* template2 */
 
 function template3(){
-  bodyPaint.style.backgroundImage = "url('https://media.giphy.com/media/KIPVubXUwkWTC/giphy.gif')"; 
+  bodyPaint.style.backgroundImage = "url('../img/1RW2.gif')"; 
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #3
       <br><br>
@@ -314,7 +332,7 @@ function template3(){
 } /* template3 */
 
 function template4(){
-    bodyPaint.style.backgroundImage = "url('https://media.giphy.com/media/ITaU0AJCGO9WtClM1V/giphy.gif')"; 
+    bodyPaint.style.backgroundImage = "url('../img/Xsju.gif')"; 
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #4
       <br><br>
@@ -331,7 +349,7 @@ function template4(){
 } /* template4 */
 
 function template5(){
-    bodyPaint.style.backgroundImage = "url('https://media.giphy.com/media/l3Ucj3n3Z4vnImTOo/giphy.gif')"; 
+    bodyPaint.style.backgroundImage = "url('../img/Cad.gif')"; 
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #5
       <br><br>
@@ -348,7 +366,7 @@ function template5(){
 } /* template5 */
 
 function template6(){
-  bodyPaint.style.backgroundImage = "url('https://media.giphy.com/media/26tnkyQiDdRwTdF2o/giphy.gif')"; 
+  bodyPaint.style.backgroundImage = "url('../img/Z23b.gif')"; 
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #6
       <br><br>
@@ -365,7 +383,7 @@ function template6(){
 } /* template6 */
 
 function template7(){
-  bodyPaint.style.backgroundImage = "url('https://media.giphy.com/media/3o85xzIiW1c1hA22zK/giphy.gif')";
+  bodyPaint.style.backgroundImage = "url('../img/fxyE.gif')";
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #7
       <br><br>
@@ -382,7 +400,7 @@ function template7(){
 } /* template7 */
 
 function template8(){
-  bodyPaint.style.backgroundImage = "url('https://media.giphy.com/media/3oEduNcToejhNSdKQo/giphy.gif')";
+  bodyPaint.style.backgroundImage = "url('../img/2zFo.gif')";
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #8
       <br><br>
@@ -399,7 +417,7 @@ function template8(){
 } /* template8 */
 
 function template9(){
-  bodyPaint.style.backgroundImage = "url('https://media.giphy.com/media/1yjqMd5PNzP7tRgkvF/giphy.gif')";
+  bodyPaint.style.backgroundImage = "url('../img/3o7G.gif')";
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #9
       <br><br>
@@ -416,7 +434,7 @@ function template9(){
 } /* template9 */
 
 function template10(){
-  bodyPaint.style.backgroundImage = "url('https://media.giphy.com/media/u7zLWObToi5Z5B8jj1/giphy.gif')";
+  bodyPaint.style.backgroundImage = "url('../img/75He.gif')";
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #10
       <br><br>
@@ -433,7 +451,7 @@ function template10(){
 } /* template10 */
 
 function template11(){
-  bodyPaint.style.backgroundImage = "url('https://media.giphy.com/media/GzY76dKiSWOu39WQqT/giphy.gif')";
+  bodyPaint.style.backgroundImage = "url('../img/9viJ.gif')";
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #11
       <br><br>
@@ -450,7 +468,7 @@ function template11(){
 } /* template11 */
 
 function template12(){
-  bodyPaint.style.backgroundImage = "url('https://media.giphy.com/media/9rj0RiZLmdzeFMh4P0/giphy.gif')";
+  bodyPaint.style.backgroundImage = "url('../img/1pX9.gif')";
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #12
       <br><br>
@@ -467,7 +485,7 @@ function template12(){
 } /* template12 */
 
 function template13(){
-  bodyPaint.style.backgroundImage = "url('https://media.giphy.com/media/5swqZegl9xLwSbYl3V/giphy.gif')";
+  bodyPaint.style.backgroundImage = "url('../img/CTM.gif')";
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #13
       <br><br>
@@ -485,7 +503,7 @@ function template13(){
 
 
 function template14(){
-  bodyPaint.style.backgroundImage = "url('https://media.giphy.com/media/hgWdCpuswSMhTUg7oa/giphy.gif')";
+  bodyPaint.style.backgroundImage = "url('../img/fxVE.gif')";
   formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
   <label for="">Pregunta #14
     <br><br>
@@ -502,7 +520,7 @@ function template14(){
 } /* template14 */
 
 function template15(){
-  bodyPaint.style.backgroundImage = "url('https://media.giphy.com/media/ZnjNpGbe5dMg3nJMTC/giphy.gif')";
+  bodyPaint.style.backgroundImage = "url('../img/1pX9.gif')";
   formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
   <label for="">Pregunta #15
     <br><br>
@@ -519,7 +537,8 @@ function template15(){
 } /* template15 */
 
 function template16(){
-  bodyPaint.style.backgroundImage = "url('https://media.giphy.com/media/0FvVKcmTZsSC0m16sa/giphy.gif')";
+  
+  bodyPaint.style.backgroundImage = "url('../img/T0fK.gif')";
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #16
       <br><br>
