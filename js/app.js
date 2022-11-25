@@ -1,5 +1,4 @@
 
-
 let formQuestions = document.querySelector(".formTest");
 let bodyPaint = document.querySelector(".testBody");
 let nombre = document.getElementById("nametxt");
@@ -11,52 +10,49 @@ let btnRadio = document.getElementsByClassName("inra");
 
 let winImg =
 {
-    1:'https://media.giphy.com/media/l2Je1Jyuhxd3caP1C/giphy.gif',
-    2:'https://media.giphy.com/media/1GTZA4flUzQI0/giphy.gif',
-    3:'https://media.giphy.com/media/ddHhhUBn25cuQ/giphy.gif',
-    4:'https://media.giphy.com/media/aWRWTF27ilPzy/giphy.gif',
-    5:'https://media.giphy.com/media/9xhRHQBtG1C8EWiLyX/giphy.gif',
-    6:'https://media.giphy.com/media/l0MYOZEYS7KEK4O64/giphy.gif',
-    7:'https://media.giphy.com/media/KEG5UtvXUD7WPIhhuy/giphy.gif',
-    8:'https://media.giphy.com/media/XE8iJs1sT7xTM5lafa/giphy.gif',
-    9:'https://media.giphy.com/media/JKIgcdIuroVRdAOvVN/giphy.gif',
-    10:'https://media.giphy.com/media/xT5LMVTPf4zIH3zYk0/giphy.gif',
-    11:'https://media.giphy.com/media/4QFAH0qZ0LQnIwVYKT/giphy.gif',
-    12:'https://media.giphy.com/media/iPTTjEt19igne/giphy.gif',
-    13:'https://media.giphy.com/media/jd6TVgsph6w7e/giphy.gif',
-    14:'https://media.giphy.com/media/cExMfdBEYMVg8Hjfgn/giphy.gif',
-    15:'https://media.giphy.com/media/xUA7b2hY9CTq9jlr4Q/giphy.gif',
-    16:'https://media.giphy.com/media/1dMNqVx9Kb12EBjFrc/giphy.gif'
+  1:'../img/win/1Jy6.gif',
+  2:'../img/win/1OYf.gif',
+  3:'../img/win/1rRk.gif',
+  4:'../img/win/2LO5.gif',
+  5:'../img/win/3Gjl.gif',
+  6:'../img/win/3kbp.gif',
+  7:'../img/win/5lu.gif',
+  8:'../img/win/5lx.gif',
+  9:'../img/win/7yTy.gif',
+  10:'../img/win/CfVn.gif',
+  11:'../img/win/g0hC.gif',
+  12:'../img/win/HMWr.gif',
+  13:'../img/win/QIh1.gif'
 }
 
 let failImg =
 {
-    1:'https://media.giphy.com/media/li0dswKqIZNpm/giphy.gif',
-    2:'https://media.giphy.com/media/3ohs4qw8hkPShGeanS/giphy.gif',
-    3:'https://media.giphy.com/media/ddHhhUBn25cuQ/giphy.gif',
-    4:'https://media.giphy.com/media/nVTa8D8zJUc2A/giphy.gif',
-    5:'https://media.giphy.com/media/3osxY9kuM2NGUfvThe/giphy.gif',
-    6:'https://media.giphy.com/media/JzUE4TFMICFpOl1847/giphy.gif',
-    7:'https://media.giphy.com/media/3oKIPs1EVbbNZYq7EA/giphy.gif',
-    8:'https://media.giphy.com/media/3og0ILv9Mvflt6tgxG/giphy.gif',
-    9:'https://media.giphy.com/media/dBs5gMAbQJRUP2WX25/giphy.gif',
-    10:'https://media.giphy.com/media/1zijzXzWn238OtLl6j/giphy.gif',
-    11:'https://media.giphy.com/media/EeIX8IZvvGZ2CRCWSO/giphy.gif',
-    12:'https://media.giphy.com/media/5ciuhhe0rQva8/giphy.gif',
-    13:'https://media.giphy.com/media/AgPiUxdXWlSEig908v/giphy.gif',
-    14:'https://media.giphy.com/media/3og0IV9poex1ZJXB1m/giphy.gif',
-    15:'https://media.giphy.com/media/J4hTgF20u64mnQzg6x/giphy.gif',
-    16:'https://media.giphy.com/media/jkZtSdwKOx05BOlapR/giphy.gif'
+  1:'../img/fail/1oaj.gif',
+  2:'../img/fail/2lz9.gif',
+  3:'../img/fail/3QD0.gif',
+  4:'../img/fail/5nP.gif',
+  5:'../img/fail/7Io.gif',
+  6:'../img/fail/8jSa.gif',
+  7:'../img/fail/O9tZ.gif',
+  8:'../img/fail/QS0.gif',
+  9:'../img/fail/RV2W.gif',
+  10:'../img/fail/WXb4.gif',
+  11:'../img/fail/WZ8Q.gif',
+  12:'../img/fail/XHNf.gif',
+  13:'../img/fail/y7.gif',
+  14:'../img/fail/zsm.gif'
 }
 
 let helloImg = {
-  1:'https://media.giphy.com/media/ASd0Ukj0y3qMM/giphy.gif',
-  2:'https://media.giphy.com/media/9HBduC3ZIgrG8/giphy.gif',
-  3:'https://media.giphy.com/media/OL1E880Th9kZVs4I4h/giphy.gif',
-  4:'https://media.giphy.com/media/UtzyBJ9trryNO4R3Ee/giphy.gif',
-  5:'https://media.giphy.com/media/kZzY6eKKPdIjK/giphy.gif',
-  6:'https://media.giphy.com/media/TIwRwwoxhW7yYTrfCS/giphy.gif',
-  7:'https://media.giphy.com/media/CoBpcNr7nfBmOKJeac/giphy.gif'
+  1:'../img/welcome/21z.gif',
+  2:'../img/welcome/3W3.gif',
+  3:'../img/welcome/9m6i.gif',
+  4:'../img/welcome/QXuj.gif',
+  5:'../img/welcome/qYt.gif',
+  6:'../img/welcome/tp5.gif',
+  7:'../img/welcome/WCSQ.gif',
+  8:'../img/welcome/YXV.gif'
+  
 }
 
 function userInit(){
@@ -65,7 +61,7 @@ function userInit(){
       
       Swal.fire({
           position: 'top',
-          imageUrl: helloImg[genRandomNumber(7)],
+          imageUrl: helloImg[genRandomNumber(8)],
           title: `¡Bienvenido ${sesion.name}!`,
           showConfirmButton: false,
           timer: 3500
@@ -111,7 +107,7 @@ function winWay(){
   score +=3;
   Swal.fire({
     position: 'top',
-    imageUrl: winImg[genRandomNumber(16)],
+    imageUrl: winImg[genRandomNumber(13)],
     title: `¡Eso es todo crack!`,
     showConfirmButton: false,
     timer: 2000
@@ -125,7 +121,7 @@ function answerError(){
   
   Swal.fire({
       position: 'top',
-      imageUrl: failImg[genRandomNumber(16)],
+      imageUrl: failImg[genRandomNumber(4)],
       title: 'Error',
       text: 'Vuelve a intertarlo!',
       showConfirmButton: false,
@@ -333,7 +329,7 @@ function template2(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #2
       <br><br>
-      <audio src="../sources/Running Up That Hill.mp3" controls autoplay preload=""></audio>
+      <audio src="../sources/Running Up That Hill.mp3" controls  preload=""></audio>
       <br>
       <br>
         Adivina la canción<br><br>
@@ -352,7 +348,7 @@ function template3(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #3
       <br><br>
-      <audio src="../sources/Black Dog.mp3" controls autoplay preload=""></audio>
+      <audio src="../sources/Black Dog.mp3" controls  preload=""></audio>
       <br>
       <br>
         Adivina la canción<br><br>
@@ -369,7 +365,7 @@ function template4(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #4
       <br><br>
-      <audio src="../sources/And i love her.mp3" controls autoplay preload=""></audio>
+      <audio src="../sources/And i love her.mp3" controls  preload=""></audio>
       <br>
       <br>
         Adivina el álbum<br><br>
@@ -386,7 +382,7 @@ function template5(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #5
       <br><br>
-      <audio src="../sources/In da club.mp3" controls autoplay preload=""></audio>
+      <audio src="../sources/In da club.mp3" controls  preload=""></audio>
       <br>
       <br>
         Adivina al intérprete<br><br>
@@ -403,7 +399,7 @@ function template6(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #6
       <br><br>
-      <audio src="../sources/A dios le pido.mp3" controls autoplay preload=""></audio>
+      <audio src="../sources/A dios le pido.mp3" controls  preload=""></audio>
       <br>
       <br>
         Adivina al intérprete<br><br>
@@ -420,7 +416,7 @@ function template7(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #7
       <br><br>
-      <audio src="../sources/Insane in the brain.mp3" controls autoplay preload=""></audio>
+      <audio src="../sources/Insane in the brain.mp3" controls  preload=""></audio>
       <br>
       <br>
         Adivina la canción<br><br>
@@ -437,7 +433,7 @@ function template8(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #8
       <br><br>
-      <audio src="../sources/One step beyon.mp3" controls autoplay preload=""></audio>
+      <audio src="../sources/One step beyon.mp3" controls  preload=""></audio>
       <br>
       <br>
         Adivina la canción<br><br>
@@ -454,7 +450,7 @@ function template9(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #9
       <br><br>
-      <audio src="../sources/King without a crown.mp3" controls autoplay preload=""></audio>
+      <audio src="../sources/King without a crown.mp3" controls  preload=""></audio>
       <br>
       <br>
         Adivina la canción<br><br>
@@ -471,7 +467,7 @@ function template10(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #10
       <br><br>
-      <audio src="../sources/Stayin alive.mp3" controls autoplay preload=""></audio>
+      <audio src="../sources/Stayin alive.mp3" controls  preload=""></audio>
       <br>
       <br>
         Adivina al intérprete<br><br>
@@ -488,7 +484,7 @@ function template11(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #11
       <br><br>
-      <audio src="../sources/Te para 3.mp3" controls autoplay preload=""></audio>
+      <audio src="../sources/Te para 3.mp3" controls  preload=""></audio>
       <br>
       <br>
         Adivina la canción<br><br>
@@ -505,7 +501,7 @@ function template12(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #12
       <br><br>
-      <audio src="../sources/No Surprise.mp3" controls autoplay preload=""></audio>
+      <audio src="../sources/No Surprise.mp3" controls  preload=""></audio>
       <br>
       <br>
         Adivina la canción<br><br>
@@ -522,7 +518,7 @@ function template13(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #13
       <br><br>
-      <audio src="../sources/Smoke on the water.mp3" controls autoplay preload=""></audio>
+      <audio src="../sources/Smoke on the water.mp3" controls  preload=""></audio>
       <br>
       <br>
         Adivina la canción<br><br>
@@ -540,7 +536,7 @@ function template14(){
   formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
   <label for="">Pregunta #14
     <br><br>
-    <audio src="../sources/Stronger than me.mp3" controls autoplay preload=""></audio>
+    <audio src="../sources/Stronger than me.mp3" controls  preload=""></audio>
     <br>
     <br>
       Adivina al intérprete<br><br>
@@ -557,7 +553,7 @@ function template15(){
   formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
   <label for="">Pregunta #15
     <br><br>
-    <audio src="../sources/All Star.mp3" controls autoplay preload=""></audio>
+    <audio src="../sources/All Star.mp3" controls  preload=""></audio>
     <br>
     <br>
       Adivina la canción<br><br>
@@ -575,7 +571,7 @@ function template16(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #16
       <br><br>
-      <audio src="../sources/Toxic.mp3" controls autoplay preload=""></audio>
+      <audio src="../sources/Toxic.mp3" controls  preload=""></audio>
       <br>
       <br>
         Adivina el álbum<br><br>
@@ -593,7 +589,7 @@ function template17(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #17
       <br><br>
-      <audio src="../sources/Rie Y Llora.mp3" controls autoplay preload=""></audio>
+      <audio src="../sources/Rie Y Llora.mp3" controls  preload=""></audio>
       <br>
       <br>
         Adivina la canción<br><br>
@@ -611,7 +607,7 @@ function template18(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #18
       <br><br>
-      <audio src="../sources/Blitzkrieg Bop.mp3" controls autoplay preload=""></audio>
+      <audio src="../sources/Blitzkrieg Bop.mp3" controls  preload=""></audio>
       <br>
       <br>
         Adivina el intérprete<br><br>
@@ -629,7 +625,7 @@ function template19(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #19
       <br><br>
-      <audio src="../sources/Monstruo verde.mp3" controls autoplay preload=""></audio>
+      <audio src="../sources/Monstruo verde.mp3" controls  preload=""></audio>
       <br>
       <br>
         Adivina la canción<br><br>
@@ -647,7 +643,7 @@ function template20(){
     formQuestions.innerHTML = `<form action="" method="post" class="formTest" >
     <label for="">Pregunta #20
       <br><br>
-      <audio src="../sources/A Little Less Conversation.mp3" controls autoplay preload=""></audio>
+      <audio src="../sources/A Little Less Conversation.mp3" controls  preload=""></audio>
       <br>
       <br>
         Adivina el autor<br><br>
