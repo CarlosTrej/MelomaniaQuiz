@@ -10,3 +10,8 @@
     font-family: 'Press Start 2P', cursive;
     font-size: 26px;
 }
+
+#bodyWin{
+    background-image: url('../img/g0AF.gif'); 
+    background-size: cover;  
+}
