@@ -52,7 +52,6 @@ let helloImg = {
   6:'../img/welcome/tp5.gif',
   7:'../img/welcome/WCSQ.gif',
   8:'../img/welcome/YXV.gif'
-  
 }
 
 function userInit(){
@@ -121,7 +120,7 @@ function answerError(){
   
   Swal.fire({
       position: 'top',
-      imageUrl: failImg[genRandomNumber(4)],
+      imageUrl: failImg[genRandomNumber(14)],
       title: 'Error',
       text: 'Vuelve a intertarlo!',
       showConfirmButton: false,
