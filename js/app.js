@@ -133,7 +133,7 @@ function answerError(){
 function welcomeRules(){
   Swal.fire({
       title: 'Unas cuantas reglas y ya!',
-      html:'<b>1- Lee con atención las preguntas<br><br>2- Ganas [3] puntos al ganar cada pregunta<br><br>3- Pierdes [1] punto al equivocarte<br><br>4- Puedes descargar la canción que quieras :)</b>',
+      html:'<b>1- Lee con atención las preguntas<br><br>2- Aprieta "play" en cada pregunta para escuchar la canción<br><br>3- Ganas [3] puntos al ganar cada pregunta<br><br>4- Pierdes [1] punto al equivocarte<br><br>5- Puedes descargar la canción que quieras :)</b>',
       imageUrl: '../img/ICU.gif',
       imageWidth: 400,
       imageHeight: 200,
